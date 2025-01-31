@@ -22,12 +22,22 @@
     </head>
     <body>
         <picture class="background">
-            <source srcset="/assets/images/pattern-background-desktop-light.svg" media="(min-width: 80rem)">
-            <source srcset="/assets/images/pattern-background-tablet-light.svg" media="(min-width: 40rem)">
-            <img class="background__image" src="/assets/images/pattern-background-mobile-light.svg" alt="Background">
+            <source
+                srcset="/assets/images/pattern-background-desktop-light.svg"
+                media="(min-width: 80rem)"
+            />
+            <source
+                srcset="/assets/images/pattern-background-tablet-light.svg"
+                media="(min-width: 40rem)"
+            />
+            <img
+                class="background__image"
+                src="/assets/images/pattern-background-mobile-light.svg"
+                alt="Background"
+            />
         </picture>
         <header>
-            <div class="subject visibility">
+            <div class="subject">
                 <img
                     class="subject__icon"
                     src="/assets/images/icon-html.svg"
@@ -53,7 +63,7 @@
             </div>
         </header>
         <main>
-            <section class="menu">
+            <section class="menu visibility">
                 <!-- Quiz menu start -->
                 <div class="title">
                     <div class="title__container">
@@ -90,61 +100,55 @@
 
                 <!-- Quiz menu end -->
             </section>
-            <section style="display: none">
+            <section class="question visibility">
                 <!-- Quiz question start -->
-                <div>
-                    <span> Question # of 10 </span>
-                    <p>What does HTML stand for?</p>
+                <div class="question__container">
+                    <div class="question__content">
+                        <i class="question__progress">
+                            Question <span id="question">1</span> of 10
+                        </i>
+                        <p class="question__description">
+                            What does HTML stand for?
+                        </p>
+                    </div>
                     <div class="progress">
                         <div class="progress__bar"></div>
                     </div>
                 </div>
 
-                <ul>
+                <ul class="list">
                     <li>
-                        <button>
-                            <span> A </span>
-                            <p>Hyper Trainer Marking Language</p>
+                        <button class="list__button">
+                            <span class="letter">A</span>
+                            <p class="option">Hyper Trainer Marking Language</p>
                         </button>
                     </li>
                     <li>
-                        <button>
-                            <span> B </span>
-                            <p>Hyper Text Marketing Language</p>
+                        <button class="list__button">
+                            <span class="letter">B</span>
+                            <p class="option">Hyper Text Marketing Language</p>
                         </button>
                     </li>
                     <li>
-                        <button>
-                            <span> C </span>
-                            <p>Hyper Text Markup Language</p>
-                        </button>
-                    </li>
-                    <li>
-                        <button>
-                            <span> D </span>
-                            <p>Hyper Text Markup Leveler</p>
-                        </button>
-                    </li>
-                    <li>
-                        <button>Submit answer</button>
+                        <button class="submit">Submit Answer</button>
                     </li>
                 </ul>
 
                 <!-- Quiz question end -->
             </section>
-            <section style="display: none">
+            <section class="complete">
                 <!-- Quiz completed start -->
-                <div>
-                    <h1>
-                        Quiz completed <br />
-                        <strong>You scored...</strong>
-                    </h1>
+                <div class="title__container">
+                    <h1 class="title__header">Quiz completed</h1>
+                    <span class="title__bold">You scored...</span>
                 </div>
 
                 <div>
-                    <div>
-                        <img src="/assets/images/icon-html.svg" alt="Icon" />
-                        <span> HTML </span>
+                    <div class="results">
+                        <div class="subject">
+                            <img class="subject__icon" src="/assets/images/icon-html.svg" alt="Icon" />
+                            <span class="subject__title"> HTML </span>
+                        </div>
                     </div>
 
                     <div>
