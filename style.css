@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    overflow-wrap: break-word;
+}
+
+:root {
+    /* color */
+    --purple: #a729f5;
+    --pure-white: #ffffff;
+    --dark-navy: #313e51;
+    --grey-navy: #626c7f;
+    --light-grey: #f4f6fa;
+    --navy: #3b4d66;
+    --light-bluish: #abc1e1;
+    --green: #26d782;
+    --red: #ee5454;
+    /* typography */
+    --display: 500 9rem/1 "Rubik";
+    --heading-large: normal 4rem/1 "Rubik";
+    --heading-large-bold: 500 4rem/1 "Rubik";
+    --heading-medium: 500 2.25rem/1 "Rubik";
+    --heading-small: 500 1.75rem/1 "Rubik";
+    --body-medium: normal 0.75rem/1.5 "Rubik";
+    --body-small: italic 0.75rem/1.5 "Rubik";
+}
