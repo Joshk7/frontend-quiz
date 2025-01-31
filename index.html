@@ -22,65 +22,63 @@
     </head>
     <body>
         <header>
-            <div class="subject">
+            <div class="subject visibility">
                 <img
                     class="subject__icon"
                     src="/assets/images/icon-html.svg"
-                    alt="Icon"
+                    alt="Subject"
                 />
                 <span class="subject__title"> HTML </span>
             </div>
             <div class="theme">
-                <img src="/assets/images/icon-moon-dark.svg" alt="Moon" />
+                <img
+                    class="theme__icon"
+                    src="/assets/images/icon-moon-dark.svg"
+                    alt="Moon"
+                />
                 <label for="control" class="switch">
                     <input id="control" type="checkbox" />
                     <span class="slider round"></span>
                 </label>
-                <img src="/assets/images/icon-sun-dark.svg" alt="" />
+                <img
+                    class="theme__icon"
+                    src="/assets/images/icon-sun-dark.svg"
+                    alt=""
+                />
             </div>
         </header>
         <main>
-            <section>
+            <section class="menu">
                 <!-- Quiz menu start -->
-                <div>
-                    <div>
-                        <h1>
-                            Welcome to the <br />
-                            <strong>Frontend Quiz!</strong>
-                        </h1>
+                <div class="title">
+                    <div class="title__container">
+                        <h1 class="title__header">Welcome to the</h1>
+                        <span class="title__bold">Frontend Quiz!</span>
                     </div>
-                    <p>Pick a subject to get started.</p>
+                    <p class="title__description">
+                        Pick a subject to get started.
+                    </p>
                 </div>
 
-                <ul class="buttons">
+                <ul class="list">
                     <li>
-                        <button>
+                        <button class="list__button">
                             <img
+                                class="subject__icon"
                                 src="/assets/images/icon-html.svg"
                                 alt="Icon"
                             />
-                            HTML
+                            <span class="subject__title">HTML</span>
                         </button>
                     </li>
                     <li>
-                        <button>
-                            <img src="/assets/images/icon-css.svg" alt="Icon" />
-                            CSS
-                        </button>
-                    </li>
-                    <li>
-                        <button>
-                            <img src="/assets/images/icon-js.svg" alt="Icon" />
-                            JavaScript
-                        </button>
-                    </li>
-                    <li>
-                        <button>
+                        <button class="list__button">
                             <img
-                                src="/assets/images/icon-accessibility.svg"
+                                class="subject__icon"
+                                src="/assets/images/icon-css.svg"
                                 alt="Icon"
                             />
-                            Accessibility
+                            <span class="subject__title">CSS</span>
                         </button>
                     </li>
                 </ul>

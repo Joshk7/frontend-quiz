@@ -58,6 +58,165 @@ span {
     --heading-large-bold: 500 4rem/1 "Rubik";
     --heading-medium: 500 2.25rem/1 "Rubik";
     --heading-small: 500 1.75rem/1 "Rubik";
+    --heading-small-mobile: 500 1.125rem/1 "Rubik";
     --body-medium: normal 0.75rem/1.5 "Rubik";
     --body-small: italic 0.75rem/1.5 "Rubik";
+}
+
+html,
+body {
+    height: 100%;
+}
+
+header {
+    padding: 1rem 1.5rem;
+    display: flex;
+}
+
+main {
+    padding: 2rem 1.5rem;
+}
+
+.subject {
+    margin-inline-end: auto;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subject__icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-inline-end: 1rem;
+}
+
+.subject__title {
+    font: 500 1.125rem/1 "Rubik";
+    color: var(--dark-navy);
+    flex-basis: 2.5rem;
+}
+
+.theme {
+    height: 2.5rem;
+    margin-inline-start: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme__icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2rem;
+    height: 1.25rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--purple);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 0.75rem;
+    width: 0.75rem;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--pure-white);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(0.75rem);
+    -ms-transform: translateX(0.75rem);
+    transform: translateX(0.75rem);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 2.125rem;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.title__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: var(--dark-navy);
+}
+
+.title__header {
+    font: 300 2.5rem/1 "Rubik";
+}
+
+.title__bold {
+    font: 500 2.5rem/1 "Rubik";
+}
+
+.title__description {
+    font: italic 0.875rem/1.5 "Rubik";
+    color: var(--grey-navy);
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.list__button {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--pure-white);
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 1rem 2.5rem 0 #8FA0C125
+}
+
+
+
+.visibility {
+    display: none;
 }
