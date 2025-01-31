@@ -66,14 +66,36 @@ span {
 html,
 body {
     height: 100%;
+    background: var(--light-grey);
 }
 
+.background {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.background__image {
+    width: 100%;
+    height: 100%;
+}  
+
 header {
+    position: relative;
+    z-index: 2;
     padding: 1rem 1.5rem;
     display: flex;
 }
 
 main {
+    position: relative;
+    z-index: 2;
     padding: 2rem 1.5rem;
 }
 
@@ -216,7 +238,7 @@ input:checked + .slider:before {
 }
 
 
-
 .visibility {
     display: none;
 }
+
