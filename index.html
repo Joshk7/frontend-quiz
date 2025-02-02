@@ -19,6 +19,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="/style.css" />
+        <script defer src="/script.js"></script>
     </head>
     <body>
         <picture class="background">
@@ -37,13 +38,13 @@
             />
         </picture>
         <header>
-            <div class="subject">
-                <img
+            <div id="subject" class="subject">
+                <!-- <img
                     class="subject__icon"
                     src="/assets/images/icon-html.svg"
                     alt="Subject"
                 />
-                <span class="subject__title"> HTML </span>
+                <span class="subject__title"> HTML </span> -->
             </div>
             <div class="theme">
                 <img
@@ -63,7 +64,7 @@
             </div>
         </header>
         <main>
-            <section class="menu visibility">
+            <section id="menu" class="menu">
                 <!-- Quiz menu start -->
                 <div class="title">
                     <div class="title__container">
@@ -75,39 +76,19 @@
                     </p>
                 </div>
 
-                <ul class="list">
-                    <li>
-                        <button class="list__button">
-                            <img
-                                class="subject__icon"
-                                src="/assets/images/icon-html.svg"
-                                alt="Icon"
-                            />
-                            <span class="subject__title">HTML</span>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="list__button">
-                            <img
-                                class="subject__icon"
-                                src="/assets/images/icon-css.svg"
-                                alt="Icon"
-                            />
-                            <span class="subject__title">CSS</span>
-                        </button>
-                    </li>
+                <ul id="menu-list" class="list">
                 </ul>
 
                 <!-- Quiz menu end -->
             </section>
-            <section class="question">
+            <section id="question" class="question invisible">
                 <!-- Quiz question start -->
                 <div class="question__container">
                     <div class="question__content">
                         <i class="question__progress">
                             Question <span id="question">1</span> of 10
                         </i>
-                        <p class="question__description">
+                        <p id="question-description" class="question__description">
                             What does HTML stand for?
                         </p>
                     </div>
@@ -116,27 +97,49 @@
                     </div>
                 </div>
 
-                <ul class="list">
-                    <li>
-                        <button class="list__button">
-                            <span class="letter">A</span>
-                            <p class="option">Hyper Trainer Marking Language</p>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="list__button">
-                            <span class="letter">B</span>
-                            <p class="option">Hyper Text Marketing Language</p>
-                        </button>
-                    </li>
-                    <li>
-                        <button class="submit">Submit Answer</button>
-                    </li>
-                </ul>
+                <form id="question-form">
+                    <ul id="options" class="list">
+                        <!-- <li>
+                            <button
+                                class="list__button"
+                            >
+                                <span class="letter">A</span>
+                                <p class="option">
+                                    Hyper Trainer Marking Language
+                                </p>
+                                <img
+                                    class="incorrect"
+                                    src="/assets/images/icon-incorrect.svg"
+                                    alt="Incorrect"
+                                />
+                            </button>
+                        </li>
+                        <li>
+                            <button class="list__button">
+                                <span class="letter">B</span>
+                                <p class="option">
+                                    Hyper Text Marketing Language
+                                </p>
+                                <img
+                                    class="correct"
+                                    src="/assets/images/icon-correct.svg"
+                                    alt="Correct"
+                                />
+                            </button>
+                        </li> -->
+                        <li id="submit">
+                            <button id="submit-question" class="submit">Submit Answer</button>
+                        </li>
+                        <li id="error" class="error invisible">
+                            <img class="error__icon" src="/assets/images/icon-error.svg" alt="Error">
+                            <span class="error__message">Please select an answer</span>
+                        </li>
+                    </ul>
+                </form>
 
                 <!-- Quiz question end -->
             </section>
-            <section class="complete visibility">
+            <section id="complete" class="complete invisible">
                 <!-- Quiz completed start -->
                 <div class="title__container">
                     <h1 class="title__header">Quiz completed</h1>
@@ -145,17 +148,21 @@
 
                 <div class="complete__container">
                     <div class="results">
-                        <div class="subject center">
-                            <img class="subject__icon" src="/assets/images/icon-html.svg" alt="Icon" />
-                            <span class="subject__title"> HTML </span>
+                        <div id="complete-subject" class="subject center">
+                            <!-- <img
+                                class="subject__icon"
+                                src="/assets/images/icon-html.svg"
+                                alt="Icon"
+                            />
+                            <span id="complete-subject" class="subject__title"></span> -->
                         </div>
                         <div class="results__content">
-                            <span class="score"> 8 </span>
-                            <p class="total">out of 10</p>
+                            <span id="score-total" class="score"></span>
+                            <p class="total">out of <span id="question-total"></span></p>
                         </div>
                     </div>
 
-                    <button class="submit">Play Again</button>
+                    <button id="complete-button" class="submit">Play Again</button>
                 </div>
 
                 <!-- Quiz completed end -->

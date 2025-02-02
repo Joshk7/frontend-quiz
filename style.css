@@ -105,7 +105,6 @@ main {
     display: flex;
     align-items: center;
     gap: 1rem;
-    flex-wrap: wrap;
 }
 
 .subject__icon {
@@ -292,6 +291,7 @@ input:checked + .slider:before {
 
 .letter {
     width: 2.5rem;
+    min-width: 2.5rem;
     height: 2.5rem;
     display: grid;
     align-content: center;
@@ -302,9 +302,48 @@ input:checked + .slider:before {
     margin-inline-end: 1rem;
 }
 
+.list__button--selected {
+    outline: 0.1875rem solid var(--purple);
+    outline-offset: -0.1875rem;
+}
+
+.list__button--correct {
+    outline: 0.1875rem solid var(--green);
+    outline-offset: -0.1875rem;
+}
+
+.list__button--incorrect {
+    outline: 0.1875rem solid var(--red);
+    outline-offset: -0.1875rem;
+}
+
 .letter--selected {
     background: var(--purple);
+    color: var(--pure-white);
 }
+
+.letter--correct {
+    background: var(--green);
+    color: var(--pure-white);
+}
+
+.letter--incorrect {
+    background: var(--red);
+    color: var(--pure-white);
+}
+
+.correct {
+    width: 2rem;
+    height: 2rem;
+    margin-inline-start: auto;
+}
+
+.incorrect {
+    width: 2rem;
+    height: 2rem;
+    margin-inline-start: auto;
+}
+
 
 .option {
     font: 500 1.125rem/1 "Rubik";
@@ -322,9 +361,26 @@ input:checked + .slider:before {
     box-shadow: 0 1rem 2.5rem 0 #8fa0c125;
 }
 
-.selected {
-    outline: 0.1875rem solid var(--purple);
-    outline-offset: -0.1875rem;
+.error {
+    align-self: center;
+    display: flex;
+    align-items: center;
+}
+
+.error__icon {
+    width: 2rem;
+    height: 2rem;
+    margin-inline-end: 0.5rem;
+}
+
+.error__message {
+    font: normal 1.125rem/1 "Rubik";
+    color: var(--red);
+}
+
+.fetch__error {
+    font: normal 1.5rem/1 "Rubik";
+    color: var(--red);
 }
 
 /* Question end */
@@ -376,6 +432,6 @@ input:checked + .slider:before {
 
 /* Complete end */
 
-.visibility {
+.invisible {
     display: none;
 }
