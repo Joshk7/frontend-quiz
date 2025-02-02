@@ -201,6 +201,7 @@ const handleCompleteClick = (e) => {
     score = 0;
     questionIndex = 0;
     answered = false;
+    subject.innerHTML = "";
     menu.classList.remove("invisible");
 }
 
