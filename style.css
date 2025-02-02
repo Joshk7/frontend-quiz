@@ -44,6 +44,7 @@ span {
 :root {
     /* color */
     --purple: #a729f5;
+    --pink: #F6E7FF;
     --pure-white: #ffffff;
     --dark-navy: #313e51;
     --grey-navy: #626c7f;
@@ -316,17 +317,20 @@ input:checked + .slider:before {
     outline-offset: -0.1875rem;
 }
 
+
 .letter--selected {
     background: var(--purple);
     color: var(--pure-white);
 }
 
-.letter--correct {
+.letter--correct,
+.letter--correct:disabled {
     background: var(--green);
     color: var(--pure-white);
 }
 
-.letter--incorrect {
+.letter--incorrect,
+.letter--incorrect:disabled {
     background: var(--red);
     color: var(--pure-white);
 }
@@ -357,6 +361,13 @@ input:checked + .slider:before {
     border-radius: 0.75rem;
     font: 500 1.125rem/1 "Rubik";
     box-shadow: 0 1rem 2.5rem 0 #8fa0c125;
+}
+
+.submit:hover,
+.submit:focus {
+    outline: none;
+    opacity: 0.5;
+    cursor: pointer;
 }
 
 .error {
@@ -434,7 +445,7 @@ input:checked + .slider:before {
     display: none;
 }
 
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 48rem) {
     header {
         padding: 2.5rem 4rem;
     }
@@ -595,6 +606,13 @@ input:checked + .slider:before {
 }
 
 @media screen and (min-width: 80rem) {
+    header {
+        padding: 5.25rem 9rem;
+    }
+
+    main {
+        padding: 0 9rem 9rem 9rem;
+    }
 
     /* start menu */
 
@@ -605,10 +623,15 @@ input:checked + .slider:before {
 
     .title {
         gap: 3rem;
+        min-width: 465px;
     }
 
     .list {
         width: 35.25rem;
+    }
+
+    .menu .list__button {
+        padding: 1.25rem;
     }
 
     /* end menu */
@@ -620,17 +643,31 @@ input:checked + .slider:before {
         justify-content: space-between;
     }
 
+    .question__container {
+        align-self: flex-start;
+        min-height: 28.25rem;
+        justify-content: space-between;
+    }
+
+    .question .list__button {
+        padding: 1.125rem 1.25rem;
+    }
+
     /* question end */
 
     /* complete start */
 
     .complete {
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-between;
     }
 
     .complete__container {
         width: 35.25rem;
+    }
+
+    .complete .title__container {
+        min-width: 450px;
     }
 
     /* complete end */
