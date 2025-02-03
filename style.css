@@ -44,7 +44,7 @@ span {
 :root {
     /* color */
     --purple: #a729f5;
-    --pink: #F6E7FF;
+    --pink: #f6e7ff;
     --pure-white: #ffffff;
     --dark-navy: #313e51;
     --grey-navy: #626c7f;
@@ -307,6 +307,23 @@ input:checked + .slider:before {
     outline-offset: -0.1875rem;
 }
 
+.list__button:not(:disabled):hover
+    .letter:not(.letter--correct, .letter--incorrect, .letter--selected),
+.list__button:not(:disabled):focus
+    .letter:not(.letter--correct, .letter--incorrect, .letter--selected) {
+    background: var(--pink);
+    color: var(--purple);
+}
+
+.list__button:not(
+        :disabled,
+        .list__button--correct,
+        .list__button--incorrect,
+        .list__button--selected
+    ):focus {
+    outline: none;
+}
+
 .list__button--correct {
     outline: 0.1875rem solid var(--green);
     outline-offset: -0.1875rem;
@@ -317,20 +334,17 @@ input:checked + .slider:before {
     outline-offset: -0.1875rem;
 }
 
-
 .letter--selected {
     background: var(--purple);
     color: var(--pure-white);
 }
 
-.letter--correct,
-.letter--correct:disabled {
+.letter--correct {
     background: var(--green);
     color: var(--pure-white);
 }
 
-.letter--incorrect,
-.letter--incorrect:disabled {
+.letter--incorrect {
     background: var(--red);
     color: var(--pure-white);
 }
@@ -466,6 +480,7 @@ input:checked + .slider:before {
 
     .theme {
         height: 3.5rem;
+        gap: 1rem;
     }
 
     .theme__icon {
