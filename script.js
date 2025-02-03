@@ -3,6 +3,8 @@ const darkBackground = document.getElementById("dark");
 const menuList = document.getElementById("menu-list");
 const subject = document.getElementById("subject");
 const theme = document.getElementById("control");
+const sun = document.getElementById("sun");
+const moon = document.getElementById("moon");
 
 const menu = document.getElementById("menu");
 const question = document.getElementById("question");
@@ -51,10 +53,18 @@ const fetchData = async () => {
 
 const handleThemeClick = (e) => {
     darkBackground.classList.toggle("invisible");
-    root.style.setProperty("--primary", "var(--dark-navy)");
-    root.style.setProperty("--primary-accent", "var(--navy)");
-    root.style.setProperty("--secondary", "var(--pure-white)");
-    root.style.setProperty("--secondary-accent", "var(--light-bluish)");
+    // root.style.setProperty("--primary", "var(--dark-navy)");
+    // root.style.setProperty("--primary-accent", "var(--navy)");
+    // root.style.setProperty("--secondary", "var(--pure-white)");
+    // root.style.setProperty("--secondary-accent", "var(--light-bluish)");
+    root.classList.toggle("dark");
+    if (root.classList.contains("dark")) {
+        sun.src = "/assets/images/icon-sun-light.svg";
+        moon.src = "/assets/images/icon-moon-light.svg";
+    } else {
+        sun.src = "/assets/images/icon-sun-dark.svg";
+        moon.src = "/assets/images/icon-moon-dark.svg";
+    }
 }
 
 theme.addEventListener("click", handleThemeClick);
