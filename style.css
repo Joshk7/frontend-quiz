@@ -266,10 +266,6 @@ input:checked + .slider:before {
     color: var(--grey-navy);
 }
 
-#question {
-    color: var(--dark-navy);
-}
-
 .question__description {
     font: 500 1.25rem/1.2 "Rubik";
 }
@@ -283,7 +279,6 @@ input:checked + .slider:before {
 }
 
 .progress__bar {
-    width: 10%;
     height: 0.5rem;
     background: var(--purple);
     border-radius: 6.5rem;
@@ -382,6 +377,10 @@ input:checked + .slider:before {
     outline: none;
     opacity: 0.5;
     cursor: pointer;
+}
+
+.submit:active {
+    opacity: 1;
 }
 
 .error {
@@ -661,6 +660,7 @@ input:checked + .slider:before {
     .question__container {
         align-self: flex-start;
         min-height: 28.25rem;
+        width: 29rem;
         justify-content: space-between;
     }
 

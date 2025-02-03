@@ -2,12 +2,15 @@ const menuList = document.getElementById("menu-list");
 const subject = document.getElementById("subject");
 const menu = document.getElementById("menu");
 const question = document.getElementById("question");
+const questionCurrent = document.getElementById("question-current");
+const questionAmount = document.getElementById("question-amount");
+const progressBar = document.getElementById("progress-bar")
 const questionDescription = document.getElementById("question-description");
 const letterMap = {
     0: "A",
     1: "B",
     2: "C",
-    3: "D"
+    3: "D",
 };
 const questionForm = document.getElementById("question-form");
 const options = document.getElementById("options");
@@ -19,7 +22,6 @@ const completeSubject = document.getElementById("complete-subject");
 const scoreTotal = document.getElementById("score-total");
 const questionTotal = document.getElementById("question-total");
 const completeButton = document.getElementById("complete-button");
-
 
 let quizzes = [];
 let quizIndex = -1;
@@ -74,12 +76,21 @@ const handleMenuClick = (e) => {
     questions = quiz.questions;
     menu.classList.add("invisible");
     renderQuestion();
-}
+};
 
 const renderQuestion = () => {
     const currentQuestion = questions[questionIndex];
     const currentOptions = currentQuestion.options;
     const currentAnswer = currentQuestion.answer;
+    const percentComplete = ((questionIndex + 1) / questions.length) * 100;
+    progressBar.style.width = `${percentComplete}%`;
+
+    if (questionIndex === 0) {
+        questionAmount.textContent = questions.length;
+    }
+
+    questionCurrent.textContent = questionIndex + 1;
+
     if (question.classList.contains("invisible")) {
         question.classList.remove("invisible");
     }
@@ -112,7 +123,7 @@ const renderQuestion = () => {
     });
 
     submitQuestion.textContent = "Submit Answer";
-}
+};
 
 const handleQuestionClick = (e) => {
     e.preventDefault();
@@ -129,10 +140,11 @@ const handleQuestionClick = (e) => {
     selectedOption = button;
     selectedOption.classList.add("list__button--selected");
     selectedOption.firstElementChild.classList.add("letter--selected");
-}
+};
 
 const handleSubmitQuestion = (e) => {
     e.preventDefault();
+    submitQuestion.blur();
     if (answered) {
         answered = false;
         questionIndex++;
@@ -144,7 +156,7 @@ const handleSubmitQuestion = (e) => {
             renderQuestion();
         }
         return;
-    } 
+    }
 
     if (selectedOption === null) {
         error.classList.remove("invisible");
@@ -179,7 +191,7 @@ const handleSubmitQuestion = (e) => {
         selectedOption = null;
         correctOption = null;
     }
-}
+};
 
 questionForm.addEventListener("submit", handleSubmitQuestion);
 
@@ -192,7 +204,7 @@ const renderComplete = () => {
     scoreTotal.textContent = score;
     questionTotal.textContent = questions.length;
     complete.classList.remove("invisible");
-}
+};
 
 const handleCompleteClick = (e) => {
     complete.classList.add("invisible");
@@ -203,10 +215,8 @@ const handleCompleteClick = (e) => {
     answered = false;
     subject.innerHTML = "";
     menu.classList.remove("invisible");
-}
+};
 
-completeButton.addEventListener("click", handleCompleteClick)
+completeButton.addEventListener("click", handleCompleteClick);
 
 fetchData();
-
-

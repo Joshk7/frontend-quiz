@@ -29,7 +29,7 @@
             />
             <source
                 srcset="/assets/images/pattern-background-tablet-light.svg"
-                media="(min-width: 40rem)"
+                media="(min-width: 48rem)"
             />
             <img
                 class="background__image"
@@ -39,18 +39,12 @@
         </picture>
         <header>
             <div id="subject" class="subject">
-                <!-- <img
-                    class="subject__icon"
-                    src="/assets/images/icon-html.svg"
-                    alt="Subject"
-                />
-                <span class="subject__title"> HTML </span> -->
             </div>
             <div class="theme">
                 <img
                     class="theme__icon"
                     src="/assets/images/icon-sun-dark.svg"
-                    alt="Moon"
+                    alt="Sun"
                 />
                 <label for="control" class="switch">
                     <input id="control" type="checkbox" />
@@ -59,7 +53,7 @@
                 <img
                     class="theme__icon"
                     src="/assets/images/icon-moon-dark.svg"
-                    alt=""
+                    alt="Moon"
                 />
             </div>
         </header>
@@ -86,47 +80,18 @@
                 <div class="question__container">
                     <div class="question__content">
                         <i class="question__progress">
-                            Question <span id="question">1</span> of 10
+                            Question <span id="question-current">1</span> of <span id="question-amount"></span>
                         </i>
                         <p id="question-description" class="question__description">
-                            What does HTML stand for?
                         </p>
                     </div>
                     <div class="progress">
-                        <div class="progress__bar"></div>
+                        <div id="progress-bar" class="progress__bar"></div>
                     </div>
                 </div>
 
                 <form id="question-form">
                     <ul id="options" class="list">
-                        <!-- <li>
-                            <button
-                                class="list__button"
-                            >
-                                <span class="letter">A</span>
-                                <p class="option">
-                                    Hyper Trainer Marking Language
-                                </p>
-                                <img
-                                    class="incorrect"
-                                    src="/assets/images/icon-incorrect.svg"
-                                    alt="Incorrect"
-                                />
-                            </button>
-                        </li>
-                        <li>
-                            <button class="list__button">
-                                <span class="letter">B</span>
-                                <p class="option">
-                                    Hyper Text Marketing Language
-                                </p>
-                                <img
-                                    class="correct"
-                                    src="/assets/images/icon-correct.svg"
-                                    alt="Correct"
-                                />
-                            </button>
-                        </li> -->
                         <li id="submit">
                             <button id="submit-question" class="submit">Submit Answer</button>
                         </li>
@@ -149,12 +114,6 @@
                 <div class="complete__container">
                     <div class="results">
                         <div id="complete-subject" class="subject center">
-                            <!-- <img
-                                class="subject__icon"
-                                src="/assets/images/icon-html.svg"
-                                alt="Icon"
-                            />
-                            <span id="complete-subject" class="subject__title"></span> -->
                         </div>
                         <div class="results__content">
                             <span id="score-total" class="score"></span>
