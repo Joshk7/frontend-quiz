@@ -1,5 +1,9 @@
+const root = document.documentElement;
+const darkBackground = document.getElementById("dark");
 const menuList = document.getElementById("menu-list");
 const subject = document.getElementById("subject");
+const theme = document.getElementById("control");
+
 const menu = document.getElementById("menu");
 const question = document.getElementById("question");
 const questionCurrent = document.getElementById("question-current");
@@ -44,6 +48,16 @@ const fetchData = async () => {
         menuList.innerHTML = `<li class="fetch__error">${error.message}</li>`;
     }
 };
+
+const handleThemeClick = (e) => {
+    darkBackground.classList.toggle("invisible");
+    root.style.setProperty("--primary", "var(--dark-navy)");
+    root.style.setProperty("--primary-accent", "var(--navy)");
+    root.style.setProperty("--secondary", "var(--pure-white)");
+    root.style.setProperty("--secondary-accent", "var(--light-bluish)");
+}
+
+theme.addEventListener("click", handleThemeClick);
 
 const renderQuizzes = () => {
     if (quizzes.length === 0) {
