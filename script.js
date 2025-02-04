@@ -37,6 +37,7 @@ let questionIndex = 0;
 let selectedOption = null;
 let correctOption = null;
 let answered = false;
+
 const fetchData = async () => {
     try {
         const response = await fetch("/data.json");
@@ -53,10 +54,6 @@ const fetchData = async () => {
 
 const handleThemeClick = (e) => {
     darkBackground.classList.toggle("invisible");
-    // root.style.setProperty("--primary", "var(--dark-navy)");
-    // root.style.setProperty("--primary-accent", "var(--navy)");
-    // root.style.setProperty("--secondary", "var(--pure-white)");
-    // root.style.setProperty("--secondary-accent", "var(--light-bluish)");
     root.classList.toggle("dark");
     if (root.classList.contains("dark")) {
         sun.src = "/assets/images/icon-sun-light.svg";
@@ -168,12 +165,10 @@ const handleQuestionClick = (e) => {
 
 const handleSubmitQuestion = (e) => {
     e.preventDefault();
-    submitQuestion.blur();
     if (answered) {
         answered = false;
         questionIndex++;
         if (questionIndex === questions.length) {
-            // Possibly don't need to worry about this
             question.classList.add("invisible");
             renderComplete();
         } else {

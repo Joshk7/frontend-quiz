@@ -53,8 +53,7 @@
             />
         </picture>
         <header>
-            <div id="subject" class="subject">
-            </div>
+            <div id="subject" class="subject"></div>
             <div class="theme">
                 <img
                     id="sun"
@@ -76,7 +75,6 @@
         </header>
         <main>
             <section id="menu" class="menu">
-                <!-- Quiz menu start -->
                 <div class="title">
                     <div class="title__container">
                         <h1 class="title__header">Welcome to the</h1>
@@ -87,42 +85,45 @@
                     </p>
                 </div>
 
-                <ul id="menu-list" class="list">
-                </ul>
-
-                <!-- Quiz menu end -->
+                <ul id="menu-list" class="list"></ul>
             </section>
             <section id="question" class="question invisible">
-                <!-- Quiz question start -->
                 <div class="question__container">
                     <div class="question__content">
                         <i class="question__progress">
-                            Question <span id="question-current">1</span> of <span id="question-amount"></span>
+                            Question <span id="question-current">1</span> of
+                            <span id="question-amount"></span>
                         </i>
-                        <p id="question-description" class="question__description">
-                        </p>
+                        <p
+                            id="question-description"
+                            class="question__description"
+                        ></p>
                     </div>
                     <div class="progress">
                         <div id="progress-bar" class="progress__bar"></div>
                     </div>
                 </div>
-
                 <form id="question-form">
                     <ul id="options" class="list">
                         <li id="submit">
-                            <button id="submit-question" class="submit">Submit Answer</button>
+                            <button id="submit-question" class="submit">
+                                Submit Answer
+                            </button>
                         </li>
                         <li id="error" class="error invisible">
-                            <img class="error__icon" src="/assets/images/icon-error.svg" alt="Error">
-                            <span class="error__message">Please select an answer</span>
+                            <img
+                                class="error__icon"
+                                src="/assets/images/icon-error.svg"
+                                alt="Error"
+                            />
+                            <span class="error__message"
+                                >Please select an answer</span
+                            >
                         </li>
                     </ul>
                 </form>
-
-                <!-- Quiz question end -->
             </section>
             <section id="complete" class="complete invisible">
-                <!-- Quiz completed start -->
                 <div class="title__container">
                     <h1 class="title__header">Quiz completed</h1>
                     <span class="title__bold">You scored...</span>
@@ -130,18 +131,19 @@
 
                 <div class="complete__container">
                     <div class="results">
-                        <div id="complete-subject" class="subject center">
-                        </div>
+                        <div id="complete-subject" class="subject center"></div>
                         <div class="results__content">
                             <span id="score-total" class="score"></span>
-                            <p class="total">out of <span id="question-total"></span></p>
+                            <p class="total">
+                                out of <span id="question-total"></span>
+                            </p>
                         </div>
                     </div>
 
-                    <button id="complete-button" class="submit">Play Again</button>
+                    <button id="complete-button" class="submit">
+                        Play Again
+                    </button>
                 </div>
-
-                <!-- Quiz completed end -->
             </section>
         </main>
     </body>

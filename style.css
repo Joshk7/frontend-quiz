@@ -53,10 +53,10 @@ span {
     --light-bluish: #abc1e1;
     --green: #26d782;
     --red: #ee5454;
-    --primary: var(--light-grey);           /* var(--dark-navy) */
-    --primary-accent: var(--pure-white);    /* var(--navy) */
-    --secondary: var(--dark-navy);          /* var(--pure-white) */
-    --secondary-accent: var(--grey-navy);   /* var(--light-bluish) */
+    --primary: var(--light-grey);
+    --primary-accent: var(--pure-white);
+    --secondary: var(--dark-navy);
+    --secondary-accent: var(--grey-navy);
 
     /* typography */
     --display: 500 9rem/1 "Rubik";
@@ -205,6 +205,10 @@ input:checked + .slider:before {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
+}
+
+.menu button:focus {
+    opacity: 0.5;
 }
 
 .title {
