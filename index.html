@@ -22,36 +22,6 @@
         <script defer src="/script.js"></script>
     </head>
     <body>
-        <picture class="background">
-            <source
-                srcset="/assets/images/pattern-background-desktop-light.svg"
-                media="(min-width: 80rem)"
-            />
-            <source
-                srcset="/assets/images/pattern-background-tablet-light.svg"
-                media="(min-width: 48rem)"
-            />
-            <img
-                class="background__image"
-                src="/assets/images/pattern-background-mobile-light.svg"
-                alt="Background"
-            />
-        </picture>
-        <picture id="dark" class="background invisible">
-            <source
-                srcset="/assets/images/pattern-background-desktop-dark.svg"
-                media="(min-width: 80rem)"
-            />
-            <source
-                srcset="/assets/images/pattern-background-tablet-dark.svg"
-                media="(min-width: 48rem)"
-            />
-            <img
-                class="background__image"
-                src="/assets/images/pattern-background-mobile-dark.svg"
-                alt="Background"
-            />
-        </picture>
         <header>
             <div id="subject" class="subject"></div>
             <div class="theme">
@@ -61,8 +31,16 @@
                     src="/assets/images/icon-sun-dark.svg"
                     alt="Sun"
                 />
-                <label for="control" class="switch">
-                    <input id="control" type="checkbox" />
+                <label class="switch">
+                    <label for="control" class="visually-hidden"
+                        >Toggle dark mode</label
+                    >
+                    <input
+                        id="control"
+                        type="checkbox"
+                        role="switch"
+                        aria-checked="false"
+                    />
                     <span class="slider round"></span>
                 </label>
                 <img
@@ -74,6 +52,36 @@
             </div>
         </header>
         <main>
+            <picture class="background">
+                <source
+                    srcset="/assets/images/pattern-background-desktop-light.svg"
+                    media="(min-width: 80rem)"
+                />
+                <source
+                    srcset="/assets/images/pattern-background-tablet-light.svg"
+                    media="(min-width: 48rem)"
+                />
+                <img
+                    class="background__image"
+                    src="/assets/images/pattern-background-mobile-light.svg"
+                    alt="Background"
+                />
+            </picture>
+            <picture id="dark" class="background invisible">
+                <source
+                    srcset="/assets/images/pattern-background-desktop-dark.svg"
+                    media="(min-width: 80rem)"
+                />
+                <source
+                    srcset="/assets/images/pattern-background-tablet-dark.svg"
+                    media="(min-width: 48rem)"
+                />
+                <img
+                    class="background__image"
+                    src="/assets/images/pattern-background-mobile-dark.svg"
+                    alt="Background"
+                />
+            </picture>
             <section id="menu" class="menu">
                 <div class="title">
                     <div class="title__container">
